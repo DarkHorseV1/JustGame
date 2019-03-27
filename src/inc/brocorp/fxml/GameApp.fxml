@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inc.brocorp.controller.MainController">
+   <children>
+      <Label layoutX="57.0" layoutY="64.0" text="Choose language">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRu" layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onAction="#showMenu" prefHeight="25.0" prefWidth="60.0" text="Русский" />
+      <Button fx:id="btnEn" layoutX="90.0" layoutY="140.0" mnemonicParsing="false" onAction="#showMenu" prefHeight="25.0" prefWidth="60.0" text="English" />
+   </children>
+</Pane>
