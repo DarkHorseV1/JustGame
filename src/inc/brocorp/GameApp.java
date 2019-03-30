@@ -9,9 +9,12 @@ import javafx.stage.Stage;
 
 public class GameApp extends Application {
 
+    public static final String BUNDLES_FOLDER = "inc.brocorp.resources.Locale";
+    private static final String FXML_APP = "fxml/GameApp.fxml";
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/GameApp.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(FXML_APP));
         primaryStage.setTitle("Just a game");
         Scene scene = new Scene(root,240, 250);
         primaryStage.setScene(scene);
