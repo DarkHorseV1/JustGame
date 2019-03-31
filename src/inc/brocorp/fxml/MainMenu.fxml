@@ -23,32 +23,32 @@
          <children>
             <VBox layoutX="78.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="btnNewGame" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.newGame">
+                  <Button fx:id="btnGame" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.newGame">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.loadGame">
+                  <Button fx:id="btnLoad" maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.loadGame">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.scores">
+                  <Button fx:id="btnScores" maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.scores">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.settings">
+                  <Button fx:id="btnSettings" maxHeight="60.0" maxWidth="200.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.settings">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.controls">
+                  <Button fx:id="btnControls" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.controls">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minHeight="30.0" minWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="%menu.exitGame">
+                  <Button fx:id="btnExit" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.exitGame">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
