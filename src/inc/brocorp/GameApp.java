@@ -11,17 +11,19 @@ public class GameApp extends Application {
 
     public static final String BUNDLES_FOLDER = "inc.brocorp.resources.Locale";
     private static final String FXML_APP = "fxml/GameApp.fxml";
-    public static Stage mainStage;
+    public static Stage menuStage;
+    private FXMLLoader fxmlLoader = new FXMLLoader();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource(FXML_APP));
+        fxmlLoader.setLocation(getClass().getResource(FXML_APP));
+        Parent root = fxmlLoader.load();
         primaryStage.setTitle("Just a game");
         Scene scene = new Scene(root, 240, 250);
-        mainStage = primaryStage;
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        menuStage = primaryStage;
+        menuStage.setScene(scene);
+        menuStage.setResizable(false);
+        menuStage.show();
     }
 
 

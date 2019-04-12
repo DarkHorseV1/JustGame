@@ -2,17 +2,20 @@ package inc.brocorp.controller;
 
 
 import static inc.brocorp.GameApp.BUNDLES_FOLDER;
+import static inc.brocorp.GameApp.menuStage;
 
-import inc.brocorp.GameApp;
+
 import inc.brocorp.i18n.LocaleManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,11 +25,28 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     private static final String FXML_MENU = "..//fxml/MainMenu.fxml";
-    private FXMLLoader fxmlLoader = new FXMLLoader();
+    private static final String FXML_GAME = "..//fxml/GameLevel1.fxml";
+    private FXMLLoader loadFxmlMenu = new FXMLLoader();
+    private FXMLLoader loadFxmlGame = new FXMLLoader();
+    private Parent menuParent;
+    private Parent gameParent;
+
+    @FXML
+    public VBox menuVBox;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        fxmlLoader.setLocation(getClass().getResource(FXML_MENU));
+    }
+
+    private void initLoader(Locale locale) {
+        try {
+            loadFxmlMenu.setLocation(getClass().getResource(FXML_MENU));
+            loadFxmlMenu.setResources(ResourceBundle.getBundle(BUNDLES_FOLDER, locale));
+            menuParent = loadFxmlMenu.load();
+        } catch (IOException o) {
+            o.printStackTrace();
+        }
     }
 
     public void btnPressed(ActionEvent ae) {
@@ -36,6 +56,7 @@ public class MainController implements Initializable {
         Button clickedButton = (Button) source;
         switch (clickedButton.getId()) {
             case "btnGame":
+                //createGame();
                 break;
             case "btnLoad":
                 break;
@@ -66,18 +87,14 @@ public class MainController implements Initializable {
     }
 
     private void createMenu(Locale locale) {
-        try {
-            fxmlLoader.setResources(ResourceBundle.getBundle(BUNDLES_FOLDER, locale));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, 275, 375);
-            Stage stage = new Stage();
-            stage.setTitle(fxmlLoader.getResources().getString("menu.title"));
-            stage.setResizable(false);
-            stage.setScene(scene);
-            stage.show();
-            GameApp.mainStage.close();
-        } catch (IOException o) {
-            o.printStackTrace();
-        }
+        initLoader(locale);
+        menuStage.setScene(new Scene(menuParent, 275, 390));
+        menuStage.setTitle(loadFxmlMenu.getResources().getString("menu.title"));
+        menuVBox.setAlignment(Pos.CENTER_LEFT);
+    }
+
+    private void createGame() {
+
     }
 }
+

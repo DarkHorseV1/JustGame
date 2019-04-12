@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inc.brocorp.gameLevels.GameLevel1">
+   <children>
+      <HBox prefHeight="60.0" prefWidth="960.0">
+         <children>
+            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#startPressed" text="Start" />
+            <Button fx:id="btnStop" mnemonicParsing="false" text="Stop" />
+         </children></HBox>
+      <Pane fx:id="pane" prefHeight="540.0" prefWidth="960.0" />
+   </children>
+</VBox>
