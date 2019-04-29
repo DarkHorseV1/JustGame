@@ -8,11 +8,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="menuVBox" prefHeight="375.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inc.brocorp.controller.MainController">
+<VBox prefHeight="375.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inc.brocorp.controller.MainController">
    <children>
       <AnchorPane prefHeight="69.0" prefWidth="346.0">
          <children>
-            <Label layoutX="14.0" layoutY="22.0" text="%menu.hello" AnchorPane.leftAnchor="14.0">
+            <Label fx:id="label" layoutX="14.0" layoutY="22.0" text="%menu.hello" AnchorPane.leftAnchor="14.0">
                <font>
                   <Font name="Comic Sans MS" size="17.0" />
                </font>
@@ -21,7 +21,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <VBox layoutX="78.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox fx:id="menuVBox" layoutX="78.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button fx:id="btnGame" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnPressed" prefHeight="30.0" prefWidth="100.0" text="%menu.newGame">
                      <VBox.margin>
